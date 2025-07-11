@@ -211,17 +211,16 @@ const ProductPage = () => {
                   About
                 </a>
               </ScrollLink>
-              <a className="hover:text-emerald-400 transition-colors">
-                Product
-              </a>
+              <Link to="/product">
+                <a className="hover:text-emerald-400 transition-colors">
+                  Product
+                </a>
+              </Link>
               <Link to="/contact-vendor">
                 <a className="hover:text-emerald-400 transition-colors">
                   Get code
                 </a>
               </Link>
-              <a className="hover:text-emerald-400 transition-colors">
-                Contact
-              </a>
               <Link to="/auth/login">
                 <a className="hover:text-emerald-400 transition-colors">
                   Signin
@@ -266,9 +265,6 @@ const ProductPage = () => {
                     Get code
                   </a>
                 </Link>
-                <a className="hover:text-emerald-400 transition-colors">
-                  Contact
-                </a>
                 <Link to="/auth/login">
                   <a className="hover:text-emerald-400 transition-colors">
                     Sign in
