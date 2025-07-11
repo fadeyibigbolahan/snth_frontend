@@ -13,13 +13,20 @@ const vendors = [
   {
     _id: 1,
     name: "Sierra Leone",
-    url: "https://wa.me/+231886342048",
+    url: "https://wa.me/+23278255632",
     rating: 4.9,
     responseTime: "~2 mins",
   },
   {
     _id: 2,
     name: "Nigeria",
+    url: "https://wa.me/+2348060629000",
+    rating: 4.9,
+    responseTime: "~2 mins",
+  },
+  {
+    _id: 3,
+    name: "Liberia",
     url: "https://wa.me/+231886342048",
     rating: 4.9,
     responseTime: "~2 mins",

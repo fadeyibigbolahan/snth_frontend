@@ -76,12 +76,9 @@ export default function Homepage() {
             />
             {/* Desktop Menu */}
             <div className="hidden md:flex space-x-8 text-white">
-              <a
-                href="#home"
-                className="hover:text-emerald-400 transition-colors"
-              >
-                Home
-              </a>
+              <Link to="/">
+                <a className="hover:text-emerald-400 transition-colors">Home</a>
+              </Link>
               <ScrollLink to="about" smooth={true} duration={500}>
                 <a className="hover:text-emerald-400 transition-colors">
                   About
@@ -97,12 +94,7 @@ export default function Homepage() {
                   Get code
                 </a>
               </Link>
-              <a
-                href="#contact"
-                className="hover:text-emerald-400 transition-colors"
-              >
-                Contact
-              </a>
+
               <Link to="/auth/login">
                 <a className="hover:text-emerald-400 transition-colors">
                   Signin
@@ -127,12 +119,11 @@ export default function Homepage() {
           {isMenuOpen && (
             <div className="md:hidden bg-black/90 backdrop-blur-md rounded-lg mt-2 py-4">
               <div className="flex flex-col space-y-4 px-4 text-white">
-                <a
-                  href="#home"
-                  className="hover:text-emerald-400 transition-colors"
-                >
-                  Home
-                </a>
+                <Link to="/">
+                  <a className="hover:text-emerald-400 transition-colors">
+                    Home
+                  </a>
+                </Link>
                 <ScrollLink to="about" smooth={true} duration={500}>
                   <a className="hover:text-emerald-400 transition-colors">
                     About
@@ -148,12 +139,6 @@ export default function Homepage() {
                     Get code
                   </a>
                 </Link>
-                <a
-                  href="#contact"
-                  className="hover:text-emerald-400 transition-colors"
-                >
-                  Contact
-                </a>
                 <Link to="/auth/login">
                   <a className="hover:text-emerald-400 transition-colors">
                     Sign in
