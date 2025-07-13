@@ -47,7 +47,7 @@ const DashboardPage = () => {
   useEffect(() => {
     if (profile) {
       setInvitationLink(
-        `https://saynotohunger.com/#/signup?r=${profile.username}`
+        `https://snthinternational.com/#/signup?r=${profile.username}`
       );
     }
   }, [profile]);
