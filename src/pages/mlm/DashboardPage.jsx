@@ -21,10 +21,6 @@ const DashboardPage = () => {
   const { user } = useSelector((state) => state.auth);
 
   useEffect(() => {
-    console.log("User:", user);
-  }, [user]);
-
-  useEffect(() => {
     const fetchProfile = async () => {
       try {
         const response = await axios.get(`${url}auth/profile`, {
@@ -47,7 +43,7 @@ const DashboardPage = () => {
   useEffect(() => {
     if (profile) {
       setInvitationLink(
-        `https://snthinternational.com/#/signup?r=${profile.username}`
+        `https://snthinternational.com/#/auth/register?r=${profile.username}`
       );
     }
   }, [profile]);
@@ -99,7 +95,7 @@ const DashboardPage = () => {
 
   return (
     <div className="flex flex-col gap-y-4 p-4 md:p-6">
-      <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row">
+      <div className="flex w-full flex-row items-center justify-between gap-4 md:flex-row">
         <h1 className="title">{`Hi, ${profile?.username || "User"}`}</h1>
       </div>
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
@@ -178,10 +174,8 @@ const DashboardPage = () => {
                 <Package size={20} />
               </div>
               <div className="gap-0 p-0">
-                <p className="font-bold">{`${
-                  profile?.earnings || "0.00"
-                } USD`}</p>
-                <p className="text-sm">Earning Balance</p>
+                <p className="font-bold">{profile?.rank || "unranked"}</p>
+                <p className="text-sm">Rank</p>
               </div>
             </div>
           </div>

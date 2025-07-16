@@ -45,6 +45,7 @@ const SignupPage = () => {
 
   useEffect(() => {
     const r = searchParams.get("r");
+    console.log("Referral ID:", r);
     if (r) {
       setFormData((prevData) => ({ ...prevData, referredBy: r }));
     }
